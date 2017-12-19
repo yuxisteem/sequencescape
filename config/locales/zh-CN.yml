@@ -1,0 +1,204 @@
+zh-CN:
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [周日, 周一, 周二, 周三, 周四, 周五, 周六]
+    abbr_day_names: [周日, 周一, 周二, 周三, 周四, 周五, 周六]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    # Used in date_select and datime_select.
+    order:
+    - :year
+    - :month
+    - :day
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+
+# Used in array.to_sentence.
+  support:
+    array:
+      sentence_connector: "和"
+      skip_last_comma: false
+
+  application:
+    name: "Sequencescape"
+    institute: "Wellcome Trust Sanger Institute"
+    institute_link: "http://sanger.ac.uk/"
+
+  global_links:
+    welcome: "欢迎"
+    workflow: "工作流"
+    workflow_not_set: "未设置!"
+    settings: "个人信息"
+    login: "登录"
+    logout: "注销"
+    help: "帮助"
+
+  navigation:
+    menu:
+      back_to_study: "返回学习"
+      back_to_project: "返回项目"
+      back_to_asset: "返回资源"
+      back_to_new_submission: "返回到新的提交"
+      new_similar_submission: "新的类似提交"
+      add_new_order: "添加新订单"
+      edit_submission: "编辑提交"
+
+    tabs:
+      studies: "学习"
+      projects: "项目"
+      samples: "范例"
+      admin: "管理员"
+      pipelines: "管道"
+      batches: "批处理"
+      reception: "前台"
+      labwhere_reception: "Labwhere前台"
+      labsearch: "实验室搜索"
+      labview:  "察看实验室"
+
+  errors:
+    occured: "出错了！"
+    single_sign_on_unavailable: "单点登录服务器不可用因此无法验证你的请求"
+
+  bed_verification:
+    layout:
+      invalid: 针对目标盘的非法布局 %{plate_barcode}
+      valid:  针对目标盘的合法布局 %{plate_barcode}
+
+  projects:
+    status:
+      not_approved: "这个项目目前还没有被批准。"
+    workflows:
+      items:
+        no_items_available: "在工作流中还没有注册 %{label} 。"
+
+  studies:
+    about: "学习会把样本和配额绑定在一起并让你发送工作请求。"
+    status:
+      not_approved: "这个学习还没有被批准。"
+      not_active: "这个学习还没有被激活。"
+    guidance:
+      nothing_interesting: "你没有任何你自己的，或者你管理的，或者你在关注的学习。请创建你的第一个学习"
+      now_create_submission: "目前还没有这个学习的任何提交。请创建你的第一个提交"
+    samples:
+      no_samples_registered: "没有注册的样本。单击来注册样本"
+    quotas:
+      no_quota_requested: "目前没有针对这个学习的配额。单击这里来请求增加配额。"
+    submissions:
+      unable_to_create_submission: "在学习被批准之前，你不能应用这些你注册的样本。"
+      pending_submission_waiting: "这个学习有待处理的提交。单击察看详细信息。"
+      last_submission_failed: "这个学习的最后提交失败。单击察看详细信息。"
+      plate:
+        event:
+          success: "为 %{barcode}创建的提交成功 %{submission_id}"
+          failed: "为 %{barcode}创建的提交失败"
+        create: "创建提交"
+
+    comments:
+      no_comments: "这个学习目前没有评论"
+    workflows:
+      items:
+        no_items_available: "这个工作流没有注册的 %{label} 。"
+      assets:
+        no_assets_available: "这个工作没有注册的 %{label}。"
+
+  requests:
+    comments:
+      no_comments: "目前没有评论"
+    status:
+      not_ready: "先前创建库的要求尚未完成，因此这个要求还没有就绪。"
+
+  assets:
+    comments:
+      no_comments: "目前还没有评论"
+
+  batches:
+    comments:
+      no_comments: "目前还没有评论"
+
+  samples:
+    name_format: "只能包含数字，字母， _ 或 -"
+
+  asset_audit:
+    key_format: "键值只能包含字母，数字，或 _"
+
+  sequenom:
+    errors:
+      plate:
+        invalid_barcode: "条码 %{barcode} (%{human_barcode}) 看上去不是合法的盘条码"
+        not_found_by_barcode: "似乎没有和条码匹配的盘 %{barcode} (%{human_barcode})"
+        not_found_by_id: "你请求的盘似乎不存在"
+        empty_barcode: "你似乎忘记扫描盘条码"
+
+      user:
+        invalid_barcode: "条码 %{barcode} (%{human_barcode}) 看上去不是合法的用户条码"
+        not_found_by_barcode: "似乎没有和条码匹配的用户 %{barcode} (%{human_barcode})"
+        empty_barcode: "你似乎忘记扫描你的条码"
+
+    notices:
+      step_completed: "还有%{step} 步盘条码 %{barcode} (%{human_barcode})就结束了"
+
+    events:
+      message: "已完成%{step}步"
+
+  formtastic:
+    submit: "提交"
+
+  submissions:
+    no_submissions: "目前还没有提交。请创建一个。"
+
+  cherrypick:
+    picking_by_row: "由于是按行筛选而不是按列筛选，cherrypick可能需要更长的时间。"
+
+  accession_service:
+    not_required:
+      not_applicable_study: "这个学习的数据发布策略为不适合，因此无法访问。如果你想要访问这个学习，请首先选择合适的发布策略。"
+      not_applicable_study_for_sample: "这个样本(%{study_id})的学习数据发布策略为不适合，因此不能加入。从学习中删除样本，或者从主要学习中加入。"
+      not_applicable_study_for_dac: "这个学习的数据发布策略为不适合，他不需要加入DAC。"
+    unsuitable:
+      no_suitable_study: "学习 %{study_ids} 没有被加入。请至少加入一个学习后再继续。你需要检查你不能同时有开放和受托的学习。"
+
+  activerecord:
+    attributes:
+      sample_metadata: &sample_metadata
+        concentration: "浓度"
+        dna_source: "DNA源"
+        volume: "量"
+      "samples/sample_metadata":
+        <<: *sample_metadata
+      study_metadata:
+        faculty_sponsor_id: "系里的赞助"
+        faculty_sponsor: "系里的赞助"
+        study_description: "学习描述"
+  activemodel:
+    errors:
+      messages:
+        record_invalid: "验证出错: %{errors}"
+  qc_reports:
+    state_descriptions:
+      default: "没有针对这个状态的描述。"
+      queued: "你的报告正在待处理队列中。 目前队列中共有 %{queue_count} 项目。"
+      requeued: "你的报告已被处理但发生了一个错误。它已经重新进入队列等待处理，你可能需要和我们联系。"
+      generating: "报告已经到达队列前面，马上就会被生成。"
+      awaiting_proceed: "报告可以发送给用户。它目前正在等待如何处理的决定。"
+      complete: "关于如何处理的决定已下。"
+    pending_report: "请稍候，在报告生成后就可以访问。"
+    fixed_content: 这一部分只是提供信息，不可更改
+    instruction: 对于任何你希望被处理的样本，请在处理列输入 Y; 如果你不想继续，输入 N 。
+    exclude_existing:
+      yes: 新样本
+      no: 所有样本
