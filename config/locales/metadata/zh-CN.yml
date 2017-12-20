@@ -1,0 +1,528 @@
+# This file contains the localised text for various model related properties.
+zh-CN:
+  metadata:
+    # These are default translations for anything that is not set specifically on a field.
+    defaults:
+      unspecified: '未定义'
+      edit_info: ""
+      help: ""
+      label: '未定义字段'
+
+    request: &REQUEST
+      metadata:
+        fragment_size_required_from:
+          label: '分段尺寸要求 (从)'
+
+        fragment_size_required_to:
+          label: '分段尺寸要求 (到)'
+
+        data_type:
+          label: 文件类型
+
+        library_type:
+          label: 库类型
+
+        read_length:
+          label: 读取长度
+
+        tag:
+          label: 标签
+
+        name:
+          label: 名字
+
+        insert_size:
+          label: 插入大小
+
+        sequencing_type:
+          label: 序列类型
+
+        bait_library:
+          label: Bait库
+
+        gigabases_expected:
+          label: 期待的Gigabases
+
+        customer_accepts_responsibility:
+          label: 失败也要收费
+
+        pcr_cycles:
+          label: PCR循环
+
+    library_creation_request:
+      <<: *REQUEST
+    sequencing_request:
+      <<: *REQUEST
+    mi_seq_sequencing_request:
+      <<: *REQUEST
+    hi_seq_sequencing_request:
+      <<: *REQUEST
+    transfer_request:
+      <<: *REQUEST
+    genotyping_request:
+      <<: *REQUEST
+    pulldown_library_creation:
+      <<: *REQUEST
+    pulldown_library_creation:
+      <<: *REQUEST
+
+    pac_bio_sequencing_request:
+      <<: *REQUEST
+    pac_bio_sample_prep_request:
+      <<: *REQUEST
+
+    pulldown:
+      requests:
+        wgs_library_request:
+          <<: *REQUEST
+        sc_library_request:
+          <<: *REQUEST
+        isc_library_request:
+          <<: *REQUEST
+        isc_library_request_part:
+          <<: *REQUEST
+
+    illumina_b:
+      requests:
+        std_library_request:
+          <<: *REQUEST
+
+    illumina_htp:
+      requests:
+        shared_library_prep:
+          <<: *REQUEST
+        library_completion:
+          <<: *REQUEST
+
+    illuminaC:
+      requests:
+        pcr_library_request:
+          <<: *REQUEST
+        no_pcr_library_request:
+          <<: *REQUEST
+
+    well:
+      metadata:
+        concentration:
+          label: 浓度
+
+        rin:
+          label: RIN
+
+    sample:
+      metadata:
+        organism:
+          label: 生物
+          edit_info: "[ 数组表达 ]"
+
+        gc_content:
+          label: GC内容
+
+        cohort:
+          label: 队列
+
+        gender:
+          label: 性别
+          edit_info: "[ 数组表达 ]"
+
+        country_of_origin:
+          label: 出生国家
+
+        geographical_region:
+          label: 地理区域
+
+        ethnicity:
+          label: 种族
+
+        dna_source:
+          label: DNA源
+
+        volume:
+          label: "容积 (µl)"
+
+        supplier_plate_id:
+          label: 盘
+
+        mother:
+          label: 母亲
+
+        father:
+          label: 父亲
+
+        replicate:
+          label: 复制
+
+        sample_public_name:
+          label: 公共名称
+          help: 样本提交名字 (它而不是样本名字会被使用).
+          edit_info: "[ ENA (查看帮助) ]"
+
+        sample_common_name:
+          label: 通用名称
+          help: 可能在出版物或其他渠道中使用的样本通用名称，或者和涉及这个样本的任何研究相关。
+          edit_info: "[ENA 要求, 数组表达]"
+
+        sample_strain_att:
+          label: Strain
+          edit_info: "[ ENA标签, 数组表达 ]"
+
+        sample_taxon_id:
+          label: TAXON ID
+          help: NCBI分类标识符。这适用于个体生物和一些环境样品。
+          edit_info: "[ ENA 要求 ]"
+
+        sample_ebi_accession_number:
+          label: ENA 样品登录号
+          help: 数据发布登记号码。在提交过程中会被自动填充。仅在样品提交给EBI时提供。
+          edit_info: "[ ENA (产看帮助) ]"
+
+        sample_sra_hold:
+          label: 样本可见性
+          help: 立刻使ENA样本公开。
+          edit_info: "[ ENA 要求 ]"
+
+        sample_description:
+          label: 样本描述
+          help: 可选参数，会被和样本同时公开
+          edit_info: "[ ENA 标签 ]"
+
+        reference_genome_id:
+          label: 参考基因组
+
+        reference_genome:
+          label: 参考基因组
+
+        sibling:
+          label: 兄弟
+
+        is_resubmitted:
+          label: 重新提交了？
+
+        date_of_sample_collection:
+          label: 样本采集时间
+
+        date_of_sample_extraction:
+          label: 样本提取日期
+
+        sample_extraction_method:
+          label: 样本提取方法
+
+        sample_storage_conditions:
+          label: 样本储存条件
+
+        sample_purified:
+          label: 样品纯化
+
+        purification_method:
+          label: 纯化方法
+
+        concentration:
+          label: 浓度
+
+        concentration_determined_by:
+          label: 浓度确定因素
+
+        sample_type:
+          label: 样本类型
+
+        sample_storage_conditions:
+          label: 样本储存条件
+
+        donor_id:
+          label:  捐赠者编号
+          ena_label: 标题
+          edit_info: "[ EGA (标题编号) ]"
+
+        subject_id:
+          label:  标题编号
+          edit_info: "[ EGA (以前捐赠编号) ]"
+
+        genotype:
+          label: 基因型
+          edit_info: "[ 数组表达 ]"
+        phenotype:
+          label: 表型
+          edit_info: "[ 数组表达 ]"
+        strain_or_line:
+          label: Strain 或 Line
+          edit_info: "[ 数组表达 ]"
+        age:
+          label: 年龄
+          edit_info: "[ 数组表达 ]"
+          help: 合法格式是秒, 分, 小时, 日, 月 年。
+        developmental_stage:
+          label: 开发阶段
+          edit_info: " [ 数组表达 ]"
+        sex:
+          label: 性别
+          edit_info: "[ 数组表达 ]"
+        cell_type:
+          label: 细胞类型
+          edit_info: "[ 数组表达 ]"
+        disease_state:
+          label: 疾病状态
+          edit_info: "[ 数组表达, EGA ]"
+        compound:
+          label: 复合
+          edit_info: "[ 数组表达 ]"
+        dose:
+          label: 剂量
+          edit_info: "[ 数组表达 ]"
+        immunoprecipitate:
+          label: 免疫沉淀
+          edit_info: "[ 数组表达 ]"
+        growth_condition:
+          label: 生长条件
+          edit_info: "[ 数组表达 ]"
+        rnai:
+          label: RNAi
+          edit_info: "[ 数组表达 ]"
+        organism_part:
+          label: 有机体部分
+          edit_info: "[ 数组表达 ]"
+        species:
+          label: 种类
+          edit_info: "[ 数组表达 ]"
+        time_point:
+          label: 时间点
+          edit_info: "[ 数组表达 ]"
+        subject:
+          label: 主题
+          edit_info: "[ EGA ]"
+        disease:
+          label : 疾病
+          help: MeSH Id.
+          edit_info: "[ EGA ]"
+        treatment:
+          label: 治疗
+          edit_info: "[ EGA ]"
+
+    study:
+      metadata:
+        number_of_gigabases_per_sample:
+          label: 每个样本中的gigabases
+
+        reference_genome_id:
+          label: 参考基因组
+
+        faculty_sponsor_id:
+          label: 教师赞助
+
+        faculty_sponsor:
+          label: 教师赞助
+
+        program_id:
+          label: 程序
+
+        program:
+          label: 程序
+
+        study_description:
+          label: 学习描述
+          edit_info: '[ ENA 需求 ]'
+          help: Please 请选择如下两种标准描述之一和你的数据一同提交 (二选一，根据你的学习而定)。 <b>如果你使用第二种描述，用你的出版物的引用或doi来替代doi或ref：</b><br /><br />这个数据是未出版物的一部分。如果想要获取关于Wellcome Trust Sanger Institute未出版物相关数据的信息(包括任何出版暂停的细节)，请访问：http://www.sanger.ac.uk/datasharing/<br /><br />或<br /><br />这个数据在如下文章中被描述 (doi或ref) 并且关于它的更多分析可以被提交并发表。关于正确使用Wellcome Trust Sanger Institute的共享数据信息，请访问 http://www.sanger.ac.uk/datasharing/<br/><p>如果合适的话，请包括一个关于数据使用限制的简短描述，比如：'只能用于AIDS相关的研究'</p>
+        contaminated_human_dna:
+          label: Does this study contain samples that are contaminated with human DNA which must be removed prior to analysis?
+          help: Usually only applicable to pathogen research when human DNA will not be sequenced and therefore does not require ethical approval.
+
+        remove_x_and_autosomes:
+          label: Does this study require the removal of X chromosome and autosome sequence?
+          help: Applicable for studies where only mtDNA and Y-chromosomal data will be submitted to EGA.
+
+        separate_y_chromosome_data:
+          label: Does this study require y chromosome data to be separated from x and autosomal data before archival?
+          help: Applicable for studies where Y-chromosome data will not be submitted to the EGA, or will be submitted separately from autosomal sequence.
+
+        study_project_id:
+          label: ENA Project ID
+          edit_info: '[ ENA (see help) ]'
+          help: The required PROJECT_ID accession is generated by the Genome Project database at NCBI and will be valid also at the other archival institutions. Enter 0 if the project id is unknown or not assigned.
+
+        study_abstract:
+          label: Abstract
+          edit_info: '[ ENA requirement ]'
+          help: Briefly describes the goals, purpose, and scope of the Study. This need not be listed if it can be inherited from a referenced publication. For managed access studies, please bear in mind it’s this text in the Abstract section that will be publicly visible on the EGA website.
+
+        study_study_title:
+          label: Title
+          edit_info: '[ ENA requirement ]'
+          help: Title of the study as would be used in a publication.
+
+        study_type_id:
+          label: Study Type
+          edit_info: '[ ENA requirement ]'
+
+        study_ebi_accession_number:
+          label: ENA Study Accession Number
+          edit_info: '[ (see help) ]'
+          help: Data Release accession Number. Will be filled automatically during submission process. Provide ONLY if the project has already been submitted to EBI.
+
+        study_sra_hold:
+          label: Study Visibility
+          edit_info: '[ ENA requirement ]'
+          help: Make this ENA project public immediately.
+
+        prelim_id:
+          label: "Prelim ID"
+          help: Prelim ID
+
+        contains_human_dna:
+          label: Do any of the samples in this study contain human DNA?
+          help: If they do, you will be required to upload the relevant documents.  This does not apply to samples that are going to have the Human DNA removed prior to analysis.
+
+        study_name_abbreviation:
+          label: Study name abbreviation
+          help: Optional abbreviation which is used when space is limited, such as on barcode labels
+
+        reference_genome:
+          label: Reference Genome
+
+        study_type:
+          label: Study Type
+
+        data_release_study_type:
+          label: What sort of study is this?
+
+        data_release_study_type_id:
+          label: What sort of study is this?
+
+        data_release_strategy:
+          label: What is the data release strategy for this study?
+          help: "Data generated at the Institute will be made available to the public or to other researchers via a managed access procedure, when this is necessary to protect confidentiality and the privacy of research participants, or to respect the terms of their consent.<p><strong>Open: </strong>Open access data will be available to the public.</p><p><strong>Managed: </strong>Managed access data will remain open to the research community and the procedure for granting access should be transparent (i.e., clearly established and published on the project and/or database website, with reasons for any refusal of access to be made explicit). Different projects may have different requirements and access provisions may need to be agreed with collaborators providing samples and the relevant ethics bodies for the study, but, insofar as is possible, access should be granted to all appropriately qualified researchers under the terms of a data access agreement that is based on WTSI’s research community access policy (please see data sharing guidelines).</p><p><strong>Not applicable: </strong>Only select if the data is never to be released.</p>"
+          values:
+            open: "Open (ENA)"
+            managed: "Managed (EGA)"
+            not_applicable: "Not Applicable (Contact Datasharing)"
+
+        data_release_standard_agreement:
+          label: "Will you be using WTSI's standard access agreement?"
+
+        data_release_non_standard_agreement:
+          label: Please upload the access agreement that you will be using
+
+        data_release_timing:
+          label: How is the data release to be timed?
+          help: "Choose from:<p><strong>Immediate:</strong> To be released as soon as possible.</p><p><strong>Standard:</strong> To be released:<ul><li>For managed (EGA) studies: 6 months</li><li>For open (ENA) studies: 12 months</li><li>Transcriptomics studies: on request only</li></ul></p><p><strong>Delayed:</strong><ul><li>For managed (EGA) studies: 6 months plus delay for period</li><li>For open (ENA) stduies: 12 months plus delay for period.</li></ul></p><p><strong>Never:</strong> This option is only availiable if the data release strategy is set to 'Not applicable.'</p>"
+
+        data_release_prevention_reason:
+          label: What is the reason for preventing data release?
+
+        data_release_prevention_approval:
+          label: Has this been approved?
+          help: "If this is for data validity reasons: approval from the sponsor is required<br />If this is for legal reasons: approval from the Data Sharing Committee is required (please contact sd4)<br />"
+
+        data_release_prevention_reason_comment:
+          label: Comment regarding prevention of data release and approval
+
+        data_release_delay_reason:
+          label: Reason for delaying release
+          help: "To apply for a delay, please send the following information to <%= configatron.data_sharing_contact.name %> (<%= configatron.data_sharing_contact.email %>):<ul><li>SAC sponsor</li><li>Study title and, where available, data set(s) ID</li><li>Study description (should describe the data types that will be produced)</li><li>Data sharing plan (to include the following):<ul><li>- Which repository/repositories will be used</li><li>- If data will be made available under a managed access mechanism</li><li>- When data will be shared</li></ul></li><li>Reason(s) for delaying data release</li></ul>"
+
+        data_release_delay_other_comment:
+          label: Please explain the reason for delaying release
+
+        data_release_delay_period:
+          label: Delay for
+
+        data_release_delay_approval:
+          label: Has the delay period been approved by the data sharing committee for this project?
+
+        data_release_delay_reason_comment:
+          label: Comment regarding data release timing and approval
+
+        data_access_group:
+          label: Data access group
+          help: "This field helps control access to product data in the iRODs seq zone.<ul></li>Leave the field empty to allow public access within the Sanger.</li><li>Supply one or more Sanger UNIX groups to restrict access to members of that group. Multiple access groups can be specified and should be separated with spaces.</li><li>You can also add individual users by their sanger user name.</li><li>All access will be prevented if all provided groups and usernames are invalid.</li></ul>"
+
+        bam:
+          label: Alignments in BAM
+          help: If you uncheck this, then you will not have alignments added to your BAM files for any runs created in this study.  Also, please be aware, that unless you choose a reference genome, the reference that the alignments will be made against is guessed based on the taxon identifier.  If there is no suitable reference genome, please leave it blank and contact NPG to get it added.
+
+        for_array_express:
+          label: Send to ArrayExpress ?
+        ArrayExpress:
+          label: ArrayExpress
+
+        dac_policy_title:
+          label: Policy title
+          help: The title for the policy. The standard Sanger policy title is 'Wellcome Trust Sanger Institute Data Sharing Policy'
+        dac_policy:
+          label: Policy Url
+          help: The URL of the policy. For all studies following the standard Sanger data policy, the link to the data sharing policy is all you need. A brief description of any limitations on data use (e.g., 'for AIDS-related research only' ) can be added to the study description.
+        ega_dac_accession_number:
+          label: EGA DAC Accession Number
+          help: Data Release accession Number. Will be filled automatically during submission process.
+#TODO help doesn't work, maybe because we are in a "related_field" subsection
+
+        ega_policy_accession_number:
+          label: EGA Policy Accession Number
+          help: Data Release accession Number. Will be filled automatically during submission process.
+
+        array_express_accession_number:
+          label: ArrayExpress Accession Number
+          help: Will be filled automatically during submission process.
+
+        snp_parent_study_id:
+          label: SNP parent study ID
+
+        snp_study_id:
+          label: SNP study ID
+
+        commercially_available:
+          label: Are all the samples to be used in this study commercially available, unlinked anonymised cell-lines?
+          help: Are all the samples to be used in this study commercially available, anonymised cell-lines or DNA/RNA from commercially available, anonymised cell-lines?
+
+        "sra public study":
+          ebi_db: ENA-STUDY
+
+        hmdmc_approval_number:
+          label: HMDMC approval number
+
+        s3_email_list:
+          label: S3 email list
+
+        data_deletion_period:
+          label: Data deletion period
+
+    project:
+      metadata:
+        project_manager_id:
+          label: Sequencing Project Manager
+
+        project_cost_code:
+          label: Project cost code
+
+        funding_comments:
+          label: Funding comments
+
+        collaborators:
+          label: Collaborators
+
+        external_funding_source:
+          label: External funding source
+          help: If applicable
+
+        budget_division_id:
+          label: Sequencing budget division
+
+        sequencing_budget_cost_centre:
+          label: Sequencing budget cost centre
+
+        project_funding_model:
+          label: Project funding model
+
+        gt_committee_tracking_id:
+          label: Genotyping committee Tracking ID
+
+    plate:
+      metadata:
+        infinium_barcode:
+          label: Infinium LIMS barcode
+          help: Optional barcode which links a plate to the proprietary Illumina Infinium LIMS
+
+    lane:
+      metadata:
+        release_reason:
+          label: Reason for releasing data
+
+
