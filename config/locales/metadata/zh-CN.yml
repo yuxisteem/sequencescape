@@ -390,53 +390,53 @@ zh-CN:
           label: 这项研究的数据发布策略是什么？
           help: "当需要保护研究参与者的机密和隐私，或者尊重他们的同意条款时，研究所产生的数据将通过一个受管理的访问流程提供给公众或其他研究人员。<p><strong>开放: </strong>开放访问数据将向公众开放。</p><p><strong>受管理的: </strong>管理访问数据将继续向研究界开放，授权过程应该是透明的。(例如：在项目和/或数据库网站上明确建立和发布，并明确拒绝访问的理由。不同的项目可能有不同的要求，访问条款可能需要与提供样本的合作者以及相关伦理机构商定，但是，只要有可能，应根据在WTSI的研究社区访问策略基础上的数据访问协议的条款授予所有合适的研究人员访问权限。（请查看数据分享指南）。</p><p><strong>不适用： </strong>只有在数据永远不会被释放时选择。</p>"
           values:
-            open: "Open (ENA)"
-            managed: "Managed (EGA)"
-            not_applicable: "Not Applicable (Contact Datasharing)"
+            open: "开放的 (ENA)"
+            managed: "受管理的 (EGA)"
+            not_applicable: "不适用 (请联系Datasharing)"
 
         data_release_standard_agreement:
-          label: "Will you be using WTSI's standard access agreement?"
+          label: "你将会使用WTSI的标准访问协议吗？"
 
         data_release_non_standard_agreement:
-          label: Please upload the access agreement that you will be using
+          label: 请上传你将要使用的访问协议
 
         data_release_timing:
-          label: How is the data release to be timed?
-          help: "Choose from:<p><strong>Immediate:</strong> To be released as soon as possible.</p><p><strong>Standard:</strong> To be released:<ul><li>For managed (EGA) studies: 6 months</li><li>For open (ENA) studies: 12 months</li><li>Transcriptomics studies: on request only</li></ul></p><p><strong>Delayed:</strong><ul><li>For managed (EGA) studies: 6 months plus delay for period</li><li>For open (ENA) stduies: 12 months plus delay for period.</li></ul></p><p><strong>Never:</strong> This option is only availiable if the data release strategy is set to 'Not applicable.'</p>"
+          label: 数据发布如何定时？
+          help: "请选择： <p><strong>立即： </strong>尽快发布。</p><p><strong>标准:</strong> 即将分布:<ul><li>对于受管理的（EGA）研究： 6个月</li><li>对于开放的（ENA）研究： 12个月</li><li>转录组学研究: 只限于经过请求的</li></ul></p><p><strong>延迟的:</strong><ul><li>对于受管理的（EGA）研究： 6个月加期间延迟</li><li>开放的（ENA）研究： 12个月加周期延迟。</li></ul></p><p><strong>从不: </strong>只有数据发布策略设置为“不适用”，则此选项才适用。</p>"
 
         data_release_prevention_reason:
-          label: What is the reason for preventing data release?
+          label: 防止数据发布的原因是什么？
 
         data_release_prevention_approval:
-          label: Has this been approved?
-          help: "If this is for data validity reasons: approval from the sponsor is required<br />If this is for legal reasons: approval from the Data Sharing Committee is required (please contact sd4)<br />"
+          label: 这已经被批准了吗？
+          help: "如果这是出于数据有效性的原因： 则需要赞助商的赞同<br/>如果出于法律原因： 则需要数据共享委员会的批准（请联系sd4）<br/>"
 
         data_release_prevention_reason_comment:
-          label: Comment regarding prevention of data release and approval
+          label: 关于防止数据发布和批准的评论
 
         data_release_delay_reason:
-          label: Reason for delaying release
-          help: "To apply for a delay, please send the following information to <%= configatron.data_sharing_contact.name %> (<%= configatron.data_sharing_contact.email %>):<ul><li>SAC sponsor</li><li>Study title and, where available, data set(s) ID</li><li>Study description (should describe the data types that will be produced)</li><li>Data sharing plan (to include the following):<ul><li>- Which repository/repositories will be used</li><li>- If data will be made available under a managed access mechanism</li><li>- When data will be shared</li></ul></li><li>Reason(s) for delaying data release</li></ul>"
+          label: 延迟发布的原因
+          help: "要申请延期，请将以下信息发送至 <%= configatron.data_sharing_contact.name %> (<%= configatron.data_sharing_contact.email %>):<ul><li>SAC赞助商</li><li>研究题目和数据集（如果有的话）ID</li><li>研究描述（应描述将要生成的数据类型）</li><li>数据共享计划（包括以下内容）：<ul><li>- 将使用哪个库进行存储</li><li>- 如果数据将在托管访问机制下可用</li><li>- 何时数据将被共享</li></ul></li><li>延迟数据发布的原因</li></ul>"
 
         data_release_delay_other_comment:
-          label: Please explain the reason for delaying release
+          label: 请解释延迟发布的原因
 
         data_release_delay_period:
-          label: Delay for
+          label: 延迟
 
         data_release_delay_approval:
-          label: Has the delay period been approved by the data sharing committee for this project?
+          label: 该项目的数据共享委员会是否已经批准了延迟期？
 
         data_release_delay_reason_comment:
-          label: Comment regarding data release timing and approval
+          label: 关于数据发布时间和批准的评论
 
         data_access_group:
-          label: Data access group
-          help: "This field helps control access to product data in the iRODs seq zone.<ul></li>Leave the field empty to allow public access within the Sanger.</li><li>Supply one or more Sanger UNIX groups to restrict access to members of that group. Multiple access groups can be specified and should be separated with spaces.</li><li>You can also add individual users by their sanger user name.</li><li>All access will be prevented if all provided groups and usernames are invalid.</li></ul>"
-
+          label: 数据访问组
+          help: "此字段有助于控制对iRODs seq区域中产品数据的访问。<ul></li>保留字段为空以允许在Sanger中的所有人进行访问。</li><li>提供一个或多个Sanger UNIX组来限制访问给那个小组的成员。 可以指定多个访问组，并且应该用空格分隔。</li><li>您还可以通过其sanger用户名添加单个用户。</li><li>如果所有提供的组和用户名无效，则所有访问将被阻止。</li></ul>"
+          
         bam:
-          label: Alignments in BAM
-          help: If you uncheck this, then you will not have alignments added to your BAM files for any runs created in this study.  Also, please be aware, that unless you choose a reference genome, the reference that the alignments will be made against is guessed based on the taxon identifier.  If there is no suitable reference genome, please leave it blank and contact NPG to get it added.
+          label: BAM中的对齐
+          help: 如果取消选中此项，那么在本研究中创建的任何运行都不会将对齐方式添加到您的BAM文件中。 此外，请注意，除非您选择了参考基因组，否则将根据分类标识符猜测比对将被提及的参考。 如果没有合适的参考基因组，请留下空白，并联系NPG以获得补充信息。
 
         for_array_express:
           label: Send to ArrayExpress ?
